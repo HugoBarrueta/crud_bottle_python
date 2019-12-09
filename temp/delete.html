@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Eliminar producto</title>
+</head>
+
+<body>
+
+    <ul class="nav justify-content-start">
+        <li class="nav-item">
+            <a class="nav-link active" href="http://localhost:3000"><h4>Inicio</h4></a>
+        </li>
+    </ul>
+
+
+    <div class="container">
+
+        <form action="/delete/{{no}}" method="GET">
+
+            <div class="row">
+                <h4>Seguro que desea eliminar el producto con codigo:</h4>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" readonly name="cod" value="{{no}}" size="50"
+                        maxlength="100">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" readonly name="name" value="{{old[0]}}" size="50"
+                        maxlength="100">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>Precio:</label>
+                    <input type="text" class="form-control" readonly name="price" value="{{old[1]}}" size="50"
+                        maxlength="100">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>Stock:</label>
+                    <input type="text" class="form-control" readonly name="stock" value="{{old[2]}}" size="50"
+                        maxlength="100">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style="margin-top: 10px;">
+                    <button type="submit" class="btn btn-danger" name="del" value="del">Eliminar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
