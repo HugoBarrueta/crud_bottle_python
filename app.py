@@ -144,5 +144,9 @@ def error500(error):
     mail(error)
     return template('temp/error500')
 
+@error(503)
+def error503(error):
+    mail(error)
+    return template('temp/error500')
 
 run(host='localhost', port=3000, debug= True, reloader=True)
