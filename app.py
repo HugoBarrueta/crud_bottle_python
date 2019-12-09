@@ -1,7 +1,5 @@
 from sys import argv
 from bottle import route, run, template, request, static_file, error,view
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import A4
 import sqlite3
 import smtplib
 
