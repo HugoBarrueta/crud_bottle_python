@@ -147,4 +147,5 @@ def error503(error):
     mail(error)
     return template('temp/error500')
 
-run(host='crud-bottle.herokuapp.com', port=3000, debug= True, reloader=True)
+if __name__ == '__main__':
+    run(host='0.0.0.0', port=argv[1])
