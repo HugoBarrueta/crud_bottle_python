@@ -2,9 +2,6 @@ from sys import argv
 from bottle import route, run, template, request, static_file, error,view
 import sqlite3
 import smtplib
-import jinja2
-import pdfkit
-import bottle_utils.form as mod
 
 db_name = 'data/products.db' #acceso a la base de datos
 
