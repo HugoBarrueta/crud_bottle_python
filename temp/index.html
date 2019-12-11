@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Guitarras</title>
+    <title>Usuarios</title>
 </head>
 
 <body>
@@ -19,14 +19,14 @@
                 </li>
             </ul>
     <div class="container">
-        <h1>Catalogo de Guitarras!</h1>
+        <h1>Usuarios</h1>
     </div>
 
     <div class="container">
 
-        <form action="/product/:no"  method="GET">
+        <form action="/persona/:no"  method="GET">
             <div class="form-group">
-                <input type="text" class="form-control" name="guitar" placeholder="Código">
+                <input type="text" class="form-control" name="person" placeholder="Código">
             </div>
 
             <div class="btn-group" role="group">
@@ -41,11 +41,11 @@
         <table class="table table-striped table-dark border border-info table table-hover"">
             <thead>
                 <tr>
-                    <th>Código</th>
-                    <th>Marca</th>
-                    <th>Precio</th>
-                    <th>Stock</th>
-                    
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>A. Paterno</th>
+                    <th>A. Materno</th>
+                    <th>Fecha Nacimiento</th>
                 </tr>
             </thead>
             %for row in rows:
@@ -62,7 +62,7 @@
     </div>
 
     <div class=" container">
-        <form action="/add_products" method="GET">
+        <form action="/add_persona" method="GET">
             <button type="submit" class="btn btn-secondary" name="add">
                 Agregar Nuevo
             </button>

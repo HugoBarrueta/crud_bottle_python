@@ -24,24 +24,31 @@
 
         <h4>Editar el producto con codigo:</h4>
         <h2>{{no}}</h2>
-        <form action="/product/{{no}}" method="GET">
+        <form action="/persona/{{no}}" method="GET">
             <div class="row">
                 <div class="col-md-4" style="margin-top: 10px;">
                     <label>Nombre:</label>
-                    <input type="text" class="form-control" name="name" value="{{old[0]}}" size="50" maxlength="100">
+                    <input type="text" class="form-control" name="nombre" value="{{old[0]}}" size="50" maxlength="100">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4" style="margin-top: 10px;">
-                    <label>Precio:</label>
-                    <input type="text" class="form-control" name="price" value="{{old[1]}}" size="50" maxlength="100">
+                    <label>A. Paterno:</label>
+                    <input type="text" class="form-control" name="apaterno" value="{{old[1]}}" size="50" maxlength="100">
                 </div>
 
             </div>
             <div class="row">
                 <div class="col-md-4" style="margin-top: 10px;">
-                    <label>Stock:</label>
-                    <input type="text" class="form-control" name="stock" value="{{old[2]}}" size="50" maxlength="100">
+                    <label>A. Materno:</label>
+                    <input type="text" class="form-control" name="amaterno" value="{{old[2]}}" size="50" maxlength="100">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>Fecha Nacimento:</label>
+                    <input type="text" class="form-control" name="fecnac" value="{{old[3]}}" size="50" maxlength="100">
                 </div>
 
             </div>
