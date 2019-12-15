@@ -8,7 +8,7 @@ def valida_fecha(fecha):
         return False
 
 def valida_Nombre(text):
-    while (not re.fullmatch(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{1,20}", text)):
+    while (not re.fullmatch(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{1,30}", text)):
         return False
     else:
         return True
