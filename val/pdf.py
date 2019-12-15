@@ -16,7 +16,8 @@ def convertHtmlToPdf(sourceHtml, outputFilename):
 
     # close output file
     resultFile.close()                 # close output file
-
+    resultFile.output()
+    print("pdf Generado")
     # return True on success and False on errors
     return pisaStatus.err
 
