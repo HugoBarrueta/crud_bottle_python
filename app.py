@@ -7,7 +7,7 @@ import val.correo as c
 import val.validaciones as v
 import val.pdf as pdf
 # Importamos la libreria canvas del paquete reportlab
-import easygui as eg 
+
 
 outputFilename = "Usuario.pdf"
 #db_name = 'data/products.db' #acceso a la base de datos
