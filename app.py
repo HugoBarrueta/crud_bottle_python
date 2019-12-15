@@ -192,7 +192,7 @@ def edit_product(no):
             #code = request.GET.get('person','').strip()
             #msg = "Usuario %s" %code
             output = template('temp/usuario', old=data, no=cod, msg=code)
-            pdf.convertHtmlToPdf(output,outputFilename)
+            pdf.convertHtmlToPdf(output)
             return output
     except ValueError as e:
         return "Error", e
