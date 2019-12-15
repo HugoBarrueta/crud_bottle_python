@@ -56,7 +56,7 @@ def add_persona(): #función que realizara al cargar la página con la ruta espe
             fecnac = request.GET.get('fecnac','').strip()
             try:
                 v.valida_fecha(fecnac)
-                if v.valida_letras(nombre) and v.valida_letras(apaterno) and v.valida_letras(amaterno) :
+                if v.valida_Nombre(nombre) and v.valida_Nombre(apaterno) and v.valida_Nombre(amaterno) :
                 #Realizamos el comando de insercion de sqlite
                 #Dentro de cada parentecis especificamos que se ingresaran datos
                     query = 'INSERT INTO persona VALUES(NULL, ?, ?, ?, ?, ?)'
@@ -102,7 +102,7 @@ def edit_product(no):
             new_fecnac = request.GET.get('fecnac','').strip()
             try:
                 v.valida_fecha(new_fecnac)
-                if v.valida_letras(new_nombre) and v.valida_letras(new_apaterno) and v.valida_letras(new_amaterno):
+                if v.valida_Nombre(new_nombre) and v.valida_Nombre(new_apaterno) and v.valida_Nombre(new_amaterno):
                     #Realizamos la función UPDATE especificando con los signos '?'
                     #que ingresaremos datos especificos
                     query = "UPDATE persona SET nombre = ?, aPaterno = ?, aMaterno = ?, fecNac = ? WHERE codigo LIKE ?"
