@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Editar producto</title>
+    <title>Editar Usuario</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
     <div class="container">
 
-        <h4>Editar el producto con codigo:</h4>
+        <h4>Editar al Usuario con codigo:</h4>
         <h2>{{no}}</h2>
         <form action="/persona/{{no}}" method="GET">
             <div class="row">
@@ -53,7 +53,16 @@
 
             </div>
             <div class="row">
-                <div class="col-sm-4" style="margin-top: 10px;">
+                %if er:
+                <div class="alert alert-warning" role="alert">
+                    <samp>
+                        <p>{{er}}</p>
+                    </samp>
+                </div>
+                %end
+            </div>
+            <div class="row">
+                <div class="col-sm-1" style="margin-top: 10px;">
                     <button type="submit" class="btn btn-secondary" name="save" value="save">Editar</button>
                 </div>
             </div>

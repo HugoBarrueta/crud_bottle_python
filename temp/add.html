@@ -8,58 +8,73 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Nuevo producto</title>
+    <title>Nuevo Usuario</title>
 </head>
 
 <body>
-        <ul class="nav justify-content-start">
-                <li class="nav-item">
-                    <a class="nav-link active" href="http://crud-bottle.herokuapp.com"><h4>Inicio</h4></a>
-                </li>
-            </ul>
-    
-    <div class="container">
-            <h3>Agregar nuevo producto</h3>
+    <ul class="nav justify-content-start">
+        <li class="nav-item">
+            <a class="nav-link active" href="http://crud-bottle.herokuapp.com">
+                <h4>Inicio</h4>
+            </a>
+        </li>
+    </ul>
 
-            <form action="/add_persona" name="addForm" method="GET">
-                <div class="row">
-                        <div class="col-md-4" style="margin-top: 10px;">
-                            <label>Código:</label>
-                            <input type="text" class="form-control" name="codigo" size="50" maxlength="4">
-                        </div>
+    <div class="container">
+        <h3>Agregar nuevo Usuario</h3>
+
+        <form action="/add_persona" name="addForm" method="GET">
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>Código:</label>
+                    <input type="text" class="form-control" name="codigo" placeholder="Código" size="50" maxlength="4">
                 </div>
-                <div class="row">
-                    <div class="col-md-4" style="margin-top: 10px;">
-                        <label>Nombre:</label>
-                        <input type="text" class="form-control" name="nombre" size="50" maxlength="25">
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" size="50" maxlength="25">
                 </div>
-                <div class="row">
-                    <div class="col-md-4" style="margin-top: 10px;">
-                        <label>A. Paterno:</label>
-                        <input type="text" class="form-control" name="apaterno" size="50" maxlength="25">
-                    </div>
-        
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>A. Paterno:</label>
+                    <input type="text" class="form-control" name="apaterno" placeholder="A. Paterno" size="50"
+                        maxlength="25">
                 </div>
-                <div class="row">
-                    <div class="col-md-4" style="margin-top: 10px;">
-                        <label>A. Materno:</label>
-                        <input type="text" class="form-control" name="amaterno" size="50" maxlength="25">
-                    </div>
-        
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>A. Materno:</label>
+                    <input type="text" class="form-control" name="amaterno" placeholder="A. Materno" size="50"
+                        maxlength="25">
                 </div>
-                <div class="row">
-                    <div class="col-md-4" style="margin-top: 10px;">
-                        <label>Fecha Nacimiento:</label>
-                        <input type="text" class="form-control" name="fecnac" size="50" maxlength="10">
-                    </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-top: 10px;">
+                    <label>Fecha Nacimiento:</label>
+                    <input type="text" class="form-control" name="fecnac" placeholder="dd/mm/yyyy" size="50"
+                        maxlength="10">
                 </div>
-                <div class="row">
-                    <div class="col-sm-4" style="margin-top: 10px;">
-                        <button type="submit" class="btn btn-secondary" name="add" value="add">Agregar</button>
-                    </div>
+
+            </div>
+            <div class="row">
+                %if er:
+                <div class="alert alert-warning" role="alert">
+                    <samp>
+                        <p>{{er}}</p>
+                    </samp>
                 </div>
-            </form>
+                %end
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style="margin-top: 10px;">
+                    <button type="submit" class="btn btn-secondary" name="add" value="add">Agregar</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 

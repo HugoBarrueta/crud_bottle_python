@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    @page {
+        size: letter landscape;
+        margin: 2cm;
+    }
+</style>
+<body>
+    <h2>Usuario:</h2>
+    Usuario: <h2>{{no}}</h2>
+    <div class="row">
+        <div class="col-md-2" style="margin-top: 10px;">
+            Nombre: <h3>{{old[0]}}</h3>
+        </div>
+        <div class="col-md-2" style="margin-top: 10px;">
+            A. Paterno: <h3>{{old[1]}}</h3>
+        </div>
+        <div class="col-md-2" style="margin-top: 10px;">
+            A. Materno: <h3>{{old[2]}}</h3>
+        </div>
+        <div class="col-md-2" style="margin-top: 10px;">
+            Fecha de nacimiento: <h3>{{old[3]}}</h3>
+        </div>
+    </div>
+</body>
+
+</html>
