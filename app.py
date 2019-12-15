@@ -215,7 +215,7 @@ def error503(error): #Esta funcion recibe un error como parametro
     return template('temp/error500') #retornamos una vista especificando el error
 
 if __name__ == '__main__': #Especificamos que si es la app principal
-    #run(host='0.0.0.0', port=argv[1]) #Corremos la app Especificando el host y puerto
+    run(host='0.0.0.0', port=argv[1]) #Corremos la app Especificando el host y puerto
     #El host se especifica '0.0.0.0' para que cuando se publique se otorgue automaticamente un host
     #El port se especifica argv[1] para que el mismo host 
-    run(host='localhost', port=3000, reloader="true")
+    #run(host='localhost', port=3000, reloader="true")
