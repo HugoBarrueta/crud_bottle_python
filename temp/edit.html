@@ -21,7 +21,7 @@
 
 
     <div class="container">
-
+        <!--Mostramos en pantalla al usuario a editar-->
         <h4>Editar al Usuario con codigo:</h4>
         <h2>{{no}}</h2>
         <form action="/persona/{{no}}" method="GET">
@@ -53,6 +53,7 @@
 
             </div>
             <div class="row">
+                <!--Mensaje de error en caso de que falle la operacion-->
                 %if er:
                 <div class="alert alert-warning" role="alert">
                     <samp>

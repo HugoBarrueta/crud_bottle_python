@@ -13,18 +13,21 @@
 </head>
 
 <body>
-        <ul class="nav justify-content-start">
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="http://crud-bottle.herokuapp.com"><h4>Inicio</h4></a>
-                </li>
-            </ul>
+    <ul class="nav justify-content-start">
+        <li class="nav-item">
+            <a class="nav-link disabled" href="http://crud-bottle.herokuapp.com">
+                <h4>Inicio</h4>
+            </a>
+        </li>
+    </ul>
     <div class="container">
         <h1>Usuarios</h1>
     </div>
 
     <div class="container">
-
-        <form action="/persona/:no"  method="GET">
+        <!--Agregamos en un form la accion a realizar y metodo que utiliza
+        enviando el codigo ingresado en el input "person"-->
+        <form action="/persona/:no" method="GET">
             <div class="form-group">
                 <label>Editar/Eliminar por código</label>
                 <input type="text" class="form-control" name="person" placeholder="Ingrese código" maxlength="4">
@@ -39,31 +42,35 @@
     </div>
 
     <div class="container">
-        <table class="table table-striped table-dark border border-info table table-hover"">
-            <thead>
+        
+            <table class="table table-striped table-dark border border-info table table-hover">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>A. Paterno</th>
+                        <th>A. Materno</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <!--Realizamos una iteracion para asiganr los datos respectivos a
+                cada una de sus filas-->
+                %for row in rows:
                 <tr>
-                    <th>Codigo</th>
-                    <th>Nombre</th>
-                    <th>A. Paterno</th>
-                    <th>A. Materno</th>
-                    <th>Fecha Nacimiento</th>
+                    %for col in row:
+                    <td>{{col}}</td>
+                    %end
                 </tr>
-            </thead>
-            %for row in rows:
-            <tr>
-                %for col in row:
-                <td>{{col}}</td>
-                
-            %end
-            </tr>
-            %end
+                %end
 
-        </table>
+            </table>
 
     </div>
 
     <div class=" container">
-        <form action="/add_persona" method="GET">
+        <form action="/add" method="GET">
             <button type="submit" class="btn btn-secondary" name="add">
                 Agregar Nuevo
             </button>
